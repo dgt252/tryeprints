@@ -1,12 +1,11 @@
-eprintsrepo.net.in — static website
-==================================
+EprintsRepo Static Website
 
-This is a fully static one-page website (HTML + CSS + JavaScript).
+Open index.html in any modern browser.
 
-How to use:
-- Keep index.html, styles.css, script.js and favicon.ico together in the same folder.
-- Upload the folder to any static host (Netlify, Vercel, GitHub Pages, S3, cPanel, etc.)
-- Or simply double-click index.html to open it in a browser.
+Files:
+- index.html — page content
+- styles.css — complete design and responsive styling
+- script.js — section reveal behavior
+- favicon.ico — browser icon
 
-Fonts load from Google Fonts, so an internet connection is needed for the
-display/mono typography to appear (the page still works without them).
+The page uses Google Fonts when internet access is available. Phone, email, and section links are already connected.
