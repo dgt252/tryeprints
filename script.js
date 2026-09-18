@@ -1,16 +1,2 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const reveal = document.querySelectorAll(".reveal");
-  if (!("IntersectionObserver" in window)) {
-    reveal.forEach((element) => element.classList.add("is-visible"));
-    return;
-  }
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  reveal.forEach((element) => observer.observe(element));
-});
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}));
+const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');o.unobserve(e.target);}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(e=>o.observe(e));
